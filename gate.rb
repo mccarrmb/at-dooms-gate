@@ -1,6 +1,9 @@
 require 'sinatra'
 
-set :public_folder, File.dirname(__FILE__)
-get '/' do
-  'pretend the doom stuff is here'
+# Main class for At Dooms Gate
+class AtDoomsGate < Sinatra::Base
+  set :public_folder, File.dirname(__FILE__)
+  get '/' do
+    'pretend the doom stuff is here'
+  end
 end

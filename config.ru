@@ -1,8 +1,7 @@
-require_relative 'gate.rb'
 require 'sinatra'
 require 'haml'
-require_relative 'gate.rb'
+require File.dirname(__FILE__) + '/gate'
 
 set :run, false
 set :raise_errors, true
-run Sinatra::Application
+run AtDoomsGate
