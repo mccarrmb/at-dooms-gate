@@ -15,3 +15,5 @@ gem "pry", "~> 0.11.3"
 gem "json", "~> 2.1"
 
 gem "haml", "~> 5.0"
+
+gem "sqlite3", "~> 1.3"

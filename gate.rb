@@ -4,6 +4,6 @@ require 'sinatra'
 class AtDoomsGate < Sinatra::Base
   set :public_folder, File.dirname(__FILE__)
   get '/' do
-    'pretend the doom stuff is here'
+    erb :index
   end
 end
