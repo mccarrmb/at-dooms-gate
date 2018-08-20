@@ -28,7 +28,7 @@ module ServerDatabase
     end
     server_list
   rescue SQLite3::Exception => e
-    puts e.to_s
+    puts e.to_s # This should be in a log as well
   ensure
     query.close if query
     db.close if db

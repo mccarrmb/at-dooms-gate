@@ -12,8 +12,16 @@ class AtDoomsGate < Sinatra::Base
 
   get '/' do
     @server_list = ServerDatabase.servers
-    puts @server_list.to_s
-    puts ServerDatabase.servers
+    erb :index
+  end
+
+  get '/servers' do
+    @servers = 'gather all server data'
+    erb :index
+  end
+
+  get '/charon' do
+    @charon = 'gather all charon data'
     erb :index
   end
 end

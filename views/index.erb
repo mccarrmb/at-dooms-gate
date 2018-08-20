@@ -4,23 +4,21 @@
 </head>
 <body>
   <header>
-    <%='Header'%>
+    <%= erb :_header %>
   </header>
-  <article>
-    <ul>
-      <% if @server_list.nil? %>
-        <li><%= 'No Servers Found' %></li>
-      <%else%>
-        <% @server_list.each do | server | %>
-          <li><%= server[:name] + ' ' + server[:port] %></li>
-        <%end%>
-      <%end%>
-    </ul>
-  </article>
   <nav>
-    <%='Navigation'%>
+    <%= erb :_navigation %>
   </nav>
+  <article>
+    <% if @server_list %>
+      <%= erb :_server_list %>
+    <% elsif @servers %>
+      <%= erb :_servers %>
+    <% elsif @charon %>
+      <%= erb :_charon %>
+    <% end %>
+  </article>
   <footer>
-    <%='Footer'%>
+    <%= erb :_footer %>
   </footer>
 </body>
