@@ -1,6 +1,8 @@
 * text=auto eol=lf
 
 # Sources
+*.erb    text
 *.rb     text
 *.rake   text
 *.md     text
+*.yml    text
