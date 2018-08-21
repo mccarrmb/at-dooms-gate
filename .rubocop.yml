@@ -19,3 +19,5 @@ Style/RedundantSelf:
 # This isn't 1988. Nobody has 80 column displays anymore.
 Metrics/LineLength:
   Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
