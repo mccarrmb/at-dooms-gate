@@ -25,7 +25,9 @@ task :debug do
     raise_errors: true
   }
   Rack::Handler::WEBrick.run(AtDoomsGate, options) do |server|
-    %i[INT TERM].each { |sig| trap(sig) { server.stop } }
+    %i[INT TERM].each do |sig|
+      trap(sig) { server.stop }
+    end
   end
 end
 
