@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <head>
+  <link rel="stylesheet" type="text/css" href="setup.css">
   <% %>
 </head>
-<body>
-  <header>
+<body class="screen">
+  <header class="title">
     <%= erb :_header %>
   </header>
-  <nav>
+  <nav class="menu panel column">
     <%= erb :_navigation %>
   </nav>
-  <article>
+  <article class="sub-menu">
     <% if @server_list %>
       <%= erb :_server_list %>
     <% elsif @servers %>
@@ -18,7 +19,7 @@
       <%= erb :_charon %>
     <% end %>
   </article>
-  <footer>
+  <footer class="footer">
     <%= erb :_footer %>
   </footer>
 </body>

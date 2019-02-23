@@ -19,3 +19,5 @@ gem "haml", "~> 5.0"
 gem "sqlite3", "~> 1.3"
 
 gem "rubocop", "~> 0.58.2"
+
+gem "sprockets", "~> 3.7"
