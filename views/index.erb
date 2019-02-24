@@ -13,25 +13,25 @@
       Current Configuration:
     </div>
     <div class="status-container bottom">
-      <% if @server_list %>
-        <%= erb :_server_list %>
-      <% elsif @servers %>
-        <%= erb :_servers %>
-      <% elsif @charon %>
-        <%= erb :_charon %>
-      <% end %>
+      <%= erb :_stats %>
     </div>
   </aside>
   <nav class="menu">
     <div class="menu-container top">
-      <span style="background:#AAAAAA;color:#555555;text-align:center;">Main Menu</span>
+      <span style="background:#AAAAAA;color:#0000AA;text-align:center;">Main Menu</span>
     </div>
     <div class="menu-container bottom">
       <%= erb :_navigation %>
     </div>
   </nav>
   <article class="sub-menu">
-
+     <% if @server_list %>
+        <%= erb :_server_list %>
+      <% elsif @servers %>
+        <%= erb :_servers %>
+      <% elsif @charon %>
+        <%= erb :_charon %>
+      <% end %>
   </article>
   <footer class="footer">
     <%= erb :_footer %>
