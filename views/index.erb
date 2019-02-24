@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"> 
   <link rel="stylesheet" type="text/css" href="setup.css">
   <% %>
 </head>
@@ -7,17 +8,30 @@
   <header class="title">
     <%= erb :_header %>
   </header>
-  <nav class="menu panel column">
-    <%= erb :_navigation %>
+  <aside class="status">
+    <div class="status-container top">
+      Current Configuration:
+    </div>
+    <div class="status-container bottom">
+      <% if @server_list %>
+        <%= erb :_server_list %>
+      <% elsif @servers %>
+        <%= erb :_servers %>
+      <% elsif @charon %>
+        <%= erb :_charon %>
+      <% end %>
+    </div>
+  </aside>
+  <nav class="menu">
+    <div class="menu-container top">
+      <span style="background:#AAAAAA;color:#555555;text-align:center;">Main Menu</span>
+    </div>
+    <div class="menu-container bottom">
+      <%= erb :_navigation %>
+    </div>
   </nav>
   <article class="sub-menu">
-    <% if @server_list %>
-      <%= erb :_server_list %>
-    <% elsif @servers %>
-      <%= erb :_servers %>
-    <% elsif @charon %>
-      <%= erb :_charon %>
-    <% end %>
+
   </article>
   <footer class="footer">
     <%= erb :_footer %>
